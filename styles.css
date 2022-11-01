@@ -1,0 +1,438 @@
+/* Global styles */
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 55px;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/***************************
+         Grid styles 
+***************************/
+
+/* Homepage Grid layout */
+.grid-container-1 {
+    display: grid;
+    margin-left: 25%;
+    margin-right: 25%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+}
+.grid-container-2 {
+    display: grid;
+    margin-left: 25%;
+    margin-right: 25%;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+}
+
+.full-container-1 {
+    width: 100%;
+    background-color: white;
+}
+
+.full-container-2 {
+    width: 100%;
+}
+
+/* Member Directory Grid Layout*/
+
+.member-grid {
+    display: grid;
+    width: 80%;
+    margin: 2% auto 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "memdir-image-1 text1"
+        "text2 memdir-image-2"
+        "memdir-image-3 text3";
+    margin-bottom: 2%;
+}
+
+.memdir-image-1 {
+    grid-area: memdir-image-1;
+}
+.memdir-image-2 {
+    grid-area: memdir-image-2;
+}
+.memdir-image-3 {
+    grid-area: memdir-image-3;
+}
+.text1 {
+    grid-area: text1;
+}
+.text2 {
+    grid-area: text2;
+}
+.text3 {
+    grid-area: text3;
+}
+.header1 {
+    grid-area: header;
+    font-size: 60px;
+}
+.member-grid div h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.member-grid div h2 {
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;
+}
+.member-grid div p {
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    width: 80%;
+    margin: 0 auto;
+}
+.member-grid figure img {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px rgb(65, 65, 65);
+}
+
+/* Events Grid Layout*/
+
+.event-grid {
+    display: grid;
+    width: 80%;
+    margin: 2% auto 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "event-image event-text"
+        "event-image2 event-text2";
+    margin-bottom: 2%;
+}
+
+.header2 {
+    grid-area: header;
+}
+.event-image {
+    grid-area: event-image;
+}
+.event-text {
+    grid-area: event-text;
+}
+.event-image2 {
+    grid-area: event-image2;
+}
+.event-text2 {
+    grid-area: event-text2;
+}
+.event-grid div h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.event-grid div h2 {
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;
+}
+.event-grid div p {
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    width: 80%;
+    margin: 0 auto;
+}
+.event-grid figure img {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px rgb(65, 65, 65);
+}
+
+/***************************
+    Navigation Styles 
+***************************/
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 80px;
+    margin-left: 2%;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-alternate {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 15px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(28, 109, 141);
+    border-bottom: 2px solid black;
+}
+
+.nav-alternate ul {
+    text-align: right;
+    width: 100%;
+}
+
+.nav-alternate ul li a{
+    font-size: 20px;
+    color: white;
+}
+.nav-alternate ul li a:hover{
+    color: black;
+    transition: 0.3s;
+    
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 35px;
+    
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 100px;
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 22px;
+    border: 2px solid white;
+    padding: 14px 70px;
+    border-radius: 100px;
+    margin-top: 45px;
+}
+
+.content a:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+.front-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.mission {
+    width: 100%;
+    text-align: center;
+}
+
+.mission h2 {
+    margin-top: 3%;
+}
+.mission p {
+    margin: 0 25% 3% 25%;
+}
+
+.divider {
+    width: 70%;
+    margin-left: 15%;
+    height: 1vh;
+    background-color: rgb(28, 27, 31);
+}
+
+/***************************
+         Footer styles 
+***************************/
+footer {
+    width: 100%;
+    padding: 15px 8px;
+    background-color: rgb(28, 27, 31);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 50px;
+}
+
+footer ul li a:hover {
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+/***************************
+         Image styles 
+***************************/
+
+
+.title {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 100px;
+    padding-top: .5%;
+    padding-bottom: .5%;
+}
+
+/* Responsive Styles */
+    /* Background Video */
+@media (min-aspect-ratio: 16/9) {
+    .front-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .front-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+    /* General Styles */
+
+@media screen and (max-width: 799px) {
+    .nav-ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .nav-ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    footer ul li {
+        display: block;
+    }
+
+}
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+    .grid-container-1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+
+    .grid-container-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+            "header"
+            "event-image"
+            "event-text"
+            "event-image2"
+            "event-text2";
+    }
+    
+    .event-text2 {
+        font-size: 2em;
+    }
+    .member-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+            "header"
+            "memdir-image-1" 
+            "text1"
+            "memdir-image-2"
+            "text2" 
+            "memdir-image-3" 
+            "text3";
+    }
+}
